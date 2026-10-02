@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCORI.IO - الدليل المالي ونموذج التكاليف التشغيلية</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Cairo", sans-serif;
+      }
+      .mono {
+        font-family: "JetBrains Mono", monospace;
+      }
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+        body {
+          background: white !important;
+          color: black !important;
+        }
+        .print-card {
+          border: 1px solid #cbd5e1 !important;
+          background: white !important;
+          color: black !important;
+          box-shadow: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-slate-950 text-slate-100 min-h-screen selection:bg-indigo-500 selection:text-white pb-20"
+  >
+    <!-- Header -->
+    <header
+      class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-indigo-600 to-violet-600 flex items-center justify-center font-black text-2xl text-white shadow-lg shadow-indigo-500/25"
+          >
+            S
+          </div>
+          <div>
+            <h1 class="text-xl font-extrabold tracking-tight text-white">
+              منصة سكوري | <span class="text-indigo-400">SCORI.IO</span>
+            </h1>
+            <p class="text-xs text-slate-400">
+              النموذج المالي والتكاليف التشغيلية المعتمدة
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 no-print">
+          <span
+            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
+          >
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            نسخة معتمدة للمراجعة
+          </span>
+          <button
+            onclick="window.print()"
+            class="px-4 py-2 text-xs font-bold rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition flex items-center gap-2"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"
+              ></path>
+            </svg>
+            طباعة / تصدير PDF
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 space-y-10">
+      <!-- Hero Card -->
+      <div
+        class="bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-950/40 border border-slate-800 rounded-3xl p-8 shadow-xl"
+      >
+        <div class="max-w-3xl space-y-2">
+          <span
+            class="text-xs font-bold tracking-wider text-indigo-400 uppercase"
+            >بيان استحقاقات التشغيل والاستضافة</span
+          >
+          <h2 class="text-2xl sm:text-3xl font-black text-white">
+            تفصيل الالتزامات المالية للعميل مالك المشروع
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            يوضح هذا المستند الأطر المالية الخاصة بتشغيل منصة SCORI.IO، مقسمة
+            إلى ثلاثة أقسام تشغيلية محددة. بنود البنية التحتية والاستضافة
+            المركزية يتم التنسيق بشأن عروضها التعاقدية واعتمادها المالي المباشر
+            عبر <strong>مدير المشروع (Project Manager)</strong>.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3 MAIN SECTIONS -->
+      <div class="space-y-8">
+        <!-- SECTION 1: ONE TIME -->
+        <section
+          class="bg-slate-900/70 border border-slate-800 rounded-3xl p-6 sm:p-8 print-card"
+        >
+          <div
+            class="flex flex-col sm:flex-row sm:items-center justify-between pb-5 border-b border-slate-800 gap-4"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg"
+                >1</span
+              >
+              <div>
+                <h3 class="text-lg font-bold text-amber-300">
+                  أولاً: تكاليف لمرة واحدة فقط (One-Time Setup & Activation)
+                </h3>
+                <p class="text-xs text-slate-400">
+                  رسوم تأسيس المنظمة والربط التقني الأولي
+                </p>
+              </div>
+            </div>
+            <div class="text-left">
+              <span class="text-2xl font-black text-amber-400 mono"
+                >$19.99</span
+              >
+              <span class="text-[11px] text-slate-400 block"
+                >تدفع مرة واحدة فقط</span
+              >
+            </div>
+          </div>
+
+          <div class="mt-6 overflow-x-auto">
+            <table class="w-full text-right text-xs sm:text-sm">
+              <thead
+                class="text-slate-400 bg-slate-950/40 border-b border-slate-800"
+              >
+                <tr>
+                  <th class="p-3">الخدمة</th>
+                  <th class="p-3">المزود</th>
+                  <th class="p-3">الغرض التشغيلي</th>
+                  <th class="p-3 text-left">القيمة المباشرة</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/60 text-slate-300">
+                <tr>
+                  <td class="p-3 font-bold text-white flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                    تفعيل منظمة Mathpix
+                  </td>
+                  <td class="p-3 text-slate-400">Mathpix Inc.</td>
+                  <td class="p-3 text-slate-400">
+                    تفعيل حساب المنظمة وتأمين مفاتيح الـ API لاستخراج المسائل
+                    والمعادلات الرياضية. يمنح الحساب رصيد ترحيبي 29$ يغطي حتى
+                    14,500 صورة.
+                  </td>
+                  <td class="p-3 text-left mono font-bold text-white">
+                    $19.99
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-white flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-slate-600"></span>
+                    تفعيل حسابات Cloudflare و Google OAuth
+                  </td>
+                  <td class="p-3 text-slate-400">Google / Cloudflare</td>
+                  <td class="p-3 text-slate-400">
+                    إنشاء المشاريع وربط بوابات المصادقة والحماية السحابية.
+                  </td>
+                  <td class="p-3 text-left mono font-bold text-emerald-400">
+                    $0.00
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- SECTION 2: ANNUAL FIXED REFERENCE -->
+        <section
+          class="bg-slate-900/70 border border-slate-800 rounded-3xl p-6 sm:p-8 print-card"
+        >
+          <div
+            class="flex flex-col sm:flex-row sm:items-center justify-between pb-5 border-b border-slate-800 gap-4"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-lg"
+                >2</span
+              >
+              <div>
+                <h3 class="text-lg font-bold text-blue-300">
+                  ثانياً: التزامات ذات دورة سنوية (Annual Commitment Scope)
+                </h3>
+                <p class="text-xs text-slate-400">
+                  تراخيص النطاق والأصول الرقمية طويلة الأجل
+                </p>
+              </div>
+            </div>
+            <div class="text-left">
+              <span class="text-xs text-slate-400 block">مرجع الدورة:</span>
+              <span class="text-sm font-bold text-blue-400"
+                >تجديد كل 12 شهراً</span
+              >
+            </div>
+          </div>
+
+          <div class="mt-6 overflow-x-auto">
+            <table class="w-full text-right text-xs sm:text-sm">
+              <thead
+                class="text-slate-400 bg-slate-950/40 border-b border-slate-800"
+              >
+                <tr>
+                  <th class="p-3">البند</th>
+                  <th class="p-3">طبيعة العقد</th>
+                  <th class="p-3">ملاحظات التجديد والمتابعة</th>
+                  <th class="p-3 text-left">المبلغ المدفوع</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/60 text-slate-300">
+                <tr>
+                  <td class="p-3 font-bold text-white flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                    حجز وتجديد نطاق المنصة (.io Domain)
+                  </td>
+                  <td class="p-3 text-slate-400">سنوي ثابت</td>
+                  <td class="p-3 text-slate-400">
+                    ملكية النطاق الرسمي scori.io وتجديده لضمان استمرارية الخدمة.
+                  </td>
+                  <td class="p-3 text-left mono font-bold text-slate-400">—</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="text-[11px] text-slate-500 mt-3">
+              * البنود الموضحة بعلامة (—) يتم حسم عرض السعر النهائي والاشتراك
+              الخاص بها بالتنسيق مع مدير المشروع.
+            </p>
+          </div>
+        </section>
+
+        <!-- SECTION 3: MONTHLY BREAKDOWN -->
+        <section
+          class="bg-slate-900/70 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-8 print-card"
+        >
+          <div
+            class="flex flex-col sm:flex-row sm:items-center justify-between pb-5 border-b border-slate-800 gap-4"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-lg"
+                >3</span
+              >
+              <div>
+                <h3 class="text-lg font-bold text-purple-300">
+                  ثالثاً: الاشتراكات والاستحقاقات الشهرية (Monthly Operations)
+                </h3>
+                <p class="text-xs text-slate-400">
+                  تشمل خوادم البنية التحتية، لوحات التحكم، والاستهلاك المتغير
+                  لخدمات الذكاء الاصطناعي
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3.1 Infrastructure & Hosting Managed by PM -->
+          <div class="space-y-4">
+            <h4
+              class="text-sm font-bold text-slate-200 flex items-center gap-2"
+            >
+              <span class="w-2 h-2 rounded bg-indigo-400"></span>
+              أ) الخوادم والبنية التحتية الشهرية (إشراف واعتماد مدير المشروع):
+            </h4>
+            <div class="overflow-x-auto">
+              <table class="w-full text-right text-xs sm:text-sm">
+                <thead
+                  class="text-slate-400 bg-slate-950/40 border-b border-slate-800"
+                >
+                  <tr>
+                    <th class="p-3">الخدمة / المورد</th>
+                    <th class="p-3">دورة الفوترة الأصلية</th>
+                    <th class="p-3">المواصفات والمهام الفنية</th>
+                    <th class="p-3 text-left">المبلغ الشهري المدفوع</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800/60 text-slate-300">
+                  <tr>
+                    <td
+                      class="p-3 font-bold text-white flex items-center gap-2"
+                    >
+                      <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+                      خادم الخادم الافتراضي الخاص (VPS Server)
+                    </td>
+                    <td class="p-3 text-slate-400">تعاقد سنوي / سداد شهري</td>
+                    <td class="p-3 text-slate-400">
+                      استضافة بيئات التشغيل، قواعد بيانات PostgreSQL و pgvector،
+                      محركات Redis، وميكروسيرفس الـ FastAPI والـ NestJS.
+                    </td>
+                    <td class="p-3 text-left mono font-bold text-slate-400">
+                      —
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="p-3 font-bold text-white flex items-center gap-2"
+                    >
+                      <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+                      لوحة تحكم وإدارة الخادم (cPanel License)
+                    </td>
+                    <td class="p-3 text-slate-400">تعاقد سنوي / سداد شهري</td>
+                    <td class="p-3 text-slate-400">
+                      ترخيص إدارة بيئة الاستضافة، توزيع المسارات، إعداد البريد
+                      المؤسسي، وتأمين منافذ السيرفر.
+                    </td>
+                    <td class="p-3 text-left mono font-bold text-slate-400">
+                      —
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="p-3 font-bold text-white flex items-center gap-2"
+                    >
+                      <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+                      نطاق المنصة (Domain scori.io)
+                    </td>
+                    <td class="p-3 text-slate-400">ترخيص سنوي / احتساب شهري</td>
+                    <td class="p-3 text-slate-400">
+                      حجز وإدارة مسارات الـ DNS وتوجيه الـ Subdomains وحماية
+                      التشفير.
+                    </td>
+                    <td class="p-3 text-left mono font-bold text-slate-400">
+                      —
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="p-3 rounded-xl bg-slate-950/40 border border-slate-800 text-[11px] text-slate-400 leading-relaxed"
+            >
+              💡 <strong>إشعار تعاقدي:</strong> البنود السابقة محددة بعلامة (—)
+              لأن تفاصيل عروض الأسعار وحسابات الدفع الخاصة بها يتولاها
+              <strong>مدير المشروع (Project Manager)</strong> مباشرة مع العميل
+              وفق المواصفات المعتمدة للمنظومة.
+            </div>
+          </div>
+
+          <!-- 3.2 Variable Session Economics -->
+          <div class="space-y-4 pt-4 border-t border-slate-800">
+            <h4
+              class="text-sm font-bold text-slate-200 flex items-center gap-2"
+            >
+              <span class="w-2 h-2 rounded bg-emerald-400"></span>
+              ب) الاستهلاك المتغير الشهري لواجهات البرمجة (حسب نشاط الطلاب
+              والجلسات):
+            </h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              يتم احتساب هذا الشق بنظام الفوترة المباشرة من الموردين
+              (Pay-As-You-Go). يوضح الجدول أدناه تفاصيل استهلاك الجلسة التعليمية
+              السقراطية النموذجية (12 دقيقة مدة معتمدة بالـ BRD):
+            </p>
+
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs"
+            >
+              <div
+                class="bg-slate-950 p-4 rounded-2xl border border-slate-800 space-y-1"
+              >
+                <span class="text-slate-500 block text-[11px]"
+                  >معدل المحادثة للجلسة:</span
+                >
+                <span class="text-sm font-bold text-white block"
+                  >7 تفاعلات متبادلة</span
+                >
+                <span class="text-[11px] text-slate-400"
+                  >سؤال وجواب وتوجيه معرفي سقراطي</span
+                >
+              </div>
+              <div
+                class="bg-slate-950 p-4 rounded-2xl border border-slate-800 space-y-1"
+              >
+                <span class="text-slate-500 block text-[11px]"
+                  >متوسط التوكنز للجلسة:</span
+                >
+                <span class="text-sm font-bold text-indigo-400 mono block"
+                  >~7,000 توكن</span
+                >
+                <span class="text-[11px] text-slate-400"
+                  >مدعومة بكاش الذاكرة المتكررة</span
+                >
+              </div>
+              <div
+                class="bg-slate-950 p-4 rounded-2xl border border-slate-800 space-y-1"
+              >
+                <span class="text-slate-500 block text-[11px]"
+                  >التعرف على الخط والمعادلات:</span
+                >
+                <span class="text-sm font-bold text-amber-400 block"
+                  >صورة مسألة واحدة</span
+                >
+                <span class="text-[11px] text-slate-400"
+                  >Mathpix Convert API ($0.002)</span
+                >
+              </div>
+              <div
+                class="bg-slate-950 p-4 rounded-2xl border border-slate-800 space-y-1"
+              >
+                <span class="text-slate-500 block text-[11px]"
+                  >تكلفة الجلسة الصافية:</span
+                >
+                <span class="text-sm font-bold text-emerald-400 mono block"
+                  >~$0.0068</span
+                >
+                <span class="text-[11px] text-emerald-400"
+                  >تعادل نحو 35 قرش مصري</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- INTERACTIVE CALCULATION ENGINE -->
+      <section
+        class="bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-8 shadow-2xl"
+      >
+        <div class="border-b border-slate-800 pb-5">
+          <h3
+            class="text-xl sm:text-2xl font-black text-white flex items-center gap-2"
+          >
+            <svg
+              class="w-6 h-6 text-indigo-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+              ></path>
+            </svg>
+            المحاكي التفاعلي المباشر: حساب استهلاك الجلسات والطلاب شهرياً
+          </h3>
+          <p class="text-xs text-slate-400 mt-1">
+            اختبر سيناريوهات أعداد الطلاب المختلفة لمشاهدة التكلفة الشهرية
+            المباشرة لواجهات البرمجة وهامش الربحية
+          </p>
+        </div>
+
+        <!-- Presets -->
+        <div class="flex flex-wrap gap-2 items-center">
+          <span class="text-xs font-bold text-slate-400"
+            >مستهدفات الـ BRD المعتمدة:</span
+          >
+          <button
+            onclick="setPlan(150, 12, 1)"
+            class="px-3.5 py-1.5 rounded-xl bg-slate-800 hover:bg-indigo-900/40 border border-slate-700 text-xs font-semibold text-slate-200 transition"
+          >
+            المرحلة التجريبية (150 طالب)
+          </button>
+          <button
+            onclick="setPlan(1000, 15, 1)"
+            class="px-3.5 py-1.5 rounded-xl bg-slate-800 hover:bg-indigo-900/40 border border-slate-700 text-xs font-semibold text-slate-200 transition"
+          >
+            الإطلاق التجاري V1.0 (1,000 طالب)
+          </button>
+          <button
+            onclick="setPlan(5000, 18, 1)"
+            class="px-3.5 py-1.5 rounded-xl bg-slate-800 hover:bg-indigo-900/40 border border-slate-700 text-xs font-semibold text-slate-200 transition"
+          >
+            التوسع V1.1 (5,000 طالب)
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- Controls -->
+          <div
+            class="lg:col-span-6 space-y-6 bg-slate-950/70 p-6 rounded-2xl border border-slate-800"
+          >
+            <div>
+              <div
+                class="flex justify-between items-center text-sm font-bold mb-2"
+              >
+                <span class="text-slate-300">عدد الطلاب النشطين:</span>
+                <span class="mono text-indigo-400 text-base" id="lblStudents"
+                  >150 طالب</span
+                >
+              </div>
+              <input
+                type="range"
+                id="rngStudents"
+                min="10"
+                max="5000"
+                step="10"
+                value="150"
+                class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-500"
+              />
+            </div>
+
+            <div>
+              <div
+                class="flex justify-between items-center text-sm font-bold mb-2"
+              >
+                <span class="text-slate-300"
+                  >متوسط الجلسات لكل طالب شهرياً:</span
+                >
+                <span class="mono text-indigo-400 text-base" id="lblSessions"
+                  >12 جلسة/شهر</span
+                >
+              </div>
+              <input
+                type="range"
+                id="rngSessions"
+                min="2"
+                max="40"
+                step="1"
+                value="12"
+                class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-500"
+              />
+            </div>
+
+            <div>
+              <div
+                class="flex justify-between items-center text-sm font-bold mb-2"
+              >
+                <span class="text-slate-300"
+                  >صور المسائل المرفوعة بالجلسة (Mathpix):</span
+                >
+                <span class="mono text-indigo-400 text-base" id="lblOcr"
+                  >1 صورة</span
+                >
+              </div>
+              <input
+                type="range"
+                id="rngOcr"
+                min="0"
+                max="5"
+                step="1"
+                value="1"
+                class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-500"
+              />
+            </div>
+
+            <!-- Advanced Addons: Cache Hit + Fallback -->
+            <div class="pt-4 border-t border-slate-800 space-y-3">
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-400"
+                  >نسبة تطابق الكاش للأسئلة المكررة (Cache Hit %):</span
+                >
+                <span class="mono text-emerald-400 font-bold" id="lblCache"
+                  >40%</span
+                >
+              </div>
+              <input
+                type="range"
+                id="rngCache"
+                min="0"
+                max="80"
+                step="5"
+                value="40"
+                class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+              />
+              <span class="text-[10px] text-slate-500 block"
+                >توفر 80% من قيمة توكنز الإدخال في DeepSeek عند تكرار نفس أفكار
+                المنهج.</span
+              >
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-800">
+              <div>
+                <label class="text-[11px] font-bold text-slate-400 block mb-1"
+                  >سعر الصرف (الدولار / ج.م):</label
+                >
+                <input
+                  type="number"
+                  id="numFx"
+                  value="52.22"
+                  step="0.1"
+                  class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-1.5 text-sm mono text-white focus:border-indigo-500 outline-none"
+                />
+              </div>
+              <div class="flex flex-col justify-end">
+                <label
+                  class="flex items-center gap-2 cursor-pointer text-xs text-slate-300 pb-1.5 select-none"
+                >
+                  <input
+                    type="checkbox"
+                    id="chkBuffer"
+                    checked
+                    class="w-4 h-4 accent-indigo-500 rounded"
+                  />
+                  <span>احتياطي رسوم بنكية 5%</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Real-Time Metrics Output -->
+          <div class="lg:col-span-6 space-y-4">
+            <div
+              class="bg-gradient-to-br from-indigo-950/30 via-slate-900 to-slate-900 p-6 rounded-2xl border border-indigo-900/40 shadow-xl space-y-6"
+            >
+              <div>
+                <span class="text-xs font-semibold text-slate-400 block"
+                  >استهلاك واجهات البرمجة المتغير المتوقع:</span
+                >
+                <div class="flex items-baseline gap-3 mt-1">
+                  <span
+                    class="text-4xl font-black text-white mono"
+                    id="outTotalUsd"
+                    >$0.00</span
+                  >
+                  <span
+                    class="text-xl font-bold text-emerald-400 mono"
+                    id="outTotalEgp"
+                    >0.00 ج.م</span
+                  >
+                </div>
+                <span
+                  class="text-[11px] text-slate-400 block mt-1"
+                  id="outSessionsSummary"
+                  >محسوبة على إجمالي 0 جلسة شهرياً</span
+                >
+              </div>
+
+              <!-- Itemized API Costs -->
+              <div class="space-y-2 pt-4 border-t border-slate-800 text-xs">
+                <div class="flex justify-between text-slate-300">
+                  <span>محرك DeepSeek Flash (مع مراعاة الكاش):</span>
+                  <span class="mono font-bold text-indigo-300" id="outDsCost"
+                    >$0.00</span
+                  >
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span>استخراج معادلات الصور (Mathpix OCR):</span>
+                  <span
+                    class="mono font-bold text-amber-300"
+                    id="outMathpixCost"
+                    >$0.00</span
+                  >
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span>مسار الطوارئ (OpenAI 5% Fallback):</span>
+                  <span class="mono font-bold text-slate-400" id="outOaiCost"
+                    >$0.00</span
+                  >
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span>خادم وتراخيص الـ VPS و cPanel والدومين:</span>
+                  <span class="mono font-bold text-slate-400"
+                    >مفوترة لمدير المشروع (—)</span
+                  >
+                </div>
+              </div>
+
+              <!-- Unit Economics -->
+              <div
+                class="grid grid-cols-2 gap-3 pt-4 border-t border-slate-800 text-center"
+              >
+                <div
+                  class="bg-slate-950/80 p-3 rounded-xl border border-slate-800"
+                >
+                  <span class="text-[10px] text-slate-400 block"
+                    >تكلفة الـ APIs لكل طالب:</span
+                  >
+                  <span
+                    class="text-base font-black text-violet-400 mono mt-0.5 block"
+                    id="outPerStudentUsd"
+                    >$0.00</span
+                  >
+                  <span
+                    class="text-[10px] text-slate-400 mono"
+                    id="outPerStudentEgp"
+                    >0.00 ج.م</span
+                  >
+                </div>
+                <div
+                  class="bg-slate-950/80 p-3 rounded-xl border border-slate-800"
+                >
+                  <span class="text-[10px] text-slate-400 block"
+                    >تكلفة الجلسة الواحدة (12 دقيقة):</span
+                  >
+                  <span
+                    class="text-base font-black text-sky-400 mono mt-0.5 block"
+                    id="outPerSessionUsd"
+                    >$0.000</span
+                  >
+                  <span
+                    class="text-[10px] text-slate-400 mono"
+                    id="outPerSessionPiasters"
+                    >0 قرش</span
+                  >
+                </div>
+              </div>
+
+              <!-- Unit Economics Margin Callout -->
+              <div
+                class="p-3 bg-emerald-500/10 border border-emerald-500/20 rounded-xl text-[11px] text-emerald-300 leading-relaxed"
+              >
+                📈 <strong>مؤشر هامش الربحية:</strong> رسم اشتراك الطالب
+                المستهدف في وثيقة العمل هو <strong>750 ج.م/شهرياً</strong>.
+                استهلاك الطالب الفعلي لواجهات الذكاء الاصطناعي لا يتجاوز بضعة
+                جنيهات شهرياً، مما يوفر هامشاً استثمارياً ممتازاً لتغطية التسويق
+                والتوسع.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Constants & Token Weights
+      const MATHPIX_IMG_PRICE = 0.002;
+      const TURNS = 7;
+      const IN_TOKENS_PER_TURN = 750;
+      const OUT_TOKENS_PER_TURN = 250;
+
+      // DeepSeek Prices per Million
+      const DS_IN_CACHE_HIT = 0.03;
+      const DS_IN_CACHE_MISS = 0.2;
+      const DS_OUT_PRICE = 0.8;
+
+      // OpenAI 4o-mini Fallback per Million
+      const OAI_IN_PRICE = 0.15;
+      const OAI_OUT_PRICE = 0.6;
+
+      function runEngine() {
+        const students = parseInt(document.getElementById("rngStudents").value);
+        const sessionsPerStudent = parseInt(
+          document.getElementById("rngSessions").value,
+        );
+        const ocrPerSession = parseInt(document.getElementById("rngOcr").value);
+        const cacheHitRatio =
+          parseInt(document.getElementById("rngCache").value) / 100;
+        const fxRate =
+          parseFloat(document.getElementById("numFx").value) || 52.22;
+        const applyBuffer = document.getElementById("chkBuffer").checked;
+
+        // Update Labels
+        document.getElementById("lblStudents").innerText =
+          `${students.toLocaleString()} طالب`;
+        document.getElementById("lblSessions").innerText =
+          `${sessionsPerStudent} جلسة/شهر`;
+        document.getElementById("lblOcr").innerText = `${ocrPerSession} صورة`;
+        document.getElementById("lblCache").innerText =
+          `${Math.round(cacheHitRatio * 100)}%`;
+
+        const totalSessions = students * sessionsPerStudent;
+        const totalImages = totalSessions * ocrPerSession;
+
+        const totalInTokens = totalSessions * TURNS * IN_TOKENS_PER_TURN;
+        const totalOutTokens = totalSessions * TURNS * OUT_TOKENS_PER_TURN;
+
+        // Split: 95% DeepSeek, 5% OpenAI Fallback
+        const dsInTokens = totalInTokens * 0.95;
+        const dsOutTokens = totalOutTokens * 0.95;
+        const oaiInTokens = totalInTokens * 0.05;
+        const oaiOutTokens = totalOutTokens * 0.05;
+
+        // DeepSeek with Cache Factor
+        const dsInCacheTokens = dsInTokens * cacheHitRatio;
+        const dsInMissTokens = dsInTokens * (1 - cacheHitRatio);
+        const costDs =
+          (dsInCacheTokens / 1e6) * DS_IN_CACHE_HIT +
+          (dsInMissTokens / 1e6) * DS_IN_CACHE_MISS +
+          (dsOutTokens / 1e6) * DS_OUT_PRICE;
+
+        // OpenAI Fallback
+        const costOai =
+          (oaiInTokens / 1e6) * OAI_IN_PRICE +
+          (oaiOutTokens / 1e6) * OAI_OUT_PRICE;
+
+        // Mathpix
+        const costMathpix = totalImages * MATHPIX_IMG_PRICE;
+
+        let variableTotal = costDs + costOai + costMathpix;
+        if (applyBuffer) {
+          variableTotal *= 1.05;
+        }
+
+        const costPerSession =
+          totalSessions > 0 ? variableTotal / totalSessions : 0;
+        const costPerStudent = students > 0 ? variableTotal / students : 0;
+
+        // Render Outputs
+        document.getElementById("outTotalUsd").innerText =
+          `$${variableTotal.toFixed(2)}`;
+        document.getElementById("outTotalEgp").innerText =
+          `${(variableTotal * fxRate).toLocaleString(undefined, { maximumFractionDigits: 1 })} ج.م`;
+        document.getElementById("outSessionsSummary").innerText =
+          `محسوبة على إجمالي ${totalSessions.toLocaleString()} جلسة محادثة و ${totalImages.toLocaleString()} صورة OCR شهرياً`;
+
+        document.getElementById("outDsCost").innerText =
+          `$${costDs.toFixed(2)}`;
+        document.getElementById("outMathpixCost").innerText =
+          `$${costMathpix.toFixed(2)}`;
+        document.getElementById("outOaiCost").innerText =
+          `$${costOai.toFixed(2)}`;
+
+        document.getElementById("outPerStudentUsd").innerText =
+          `$${costPerStudent.toFixed(2)}`;
+        document.getElementById("outPerStudentEgp").innerText =
+          `${(costPerStudent * fxRate).toFixed(1)} ج.م`;
+
+        document.getElementById("outPerSessionUsd").innerText =
+          `$${costPerSession.toFixed(4)}`;
+        document.getElementById("outPerSessionPiasters").innerText =
+          `${(costPerSession * fxRate * 100).toFixed(1)} قرش`;
+      }
+
+      function setPlan(st, se, oc) {
+        document.getElementById("rngStudents").value = st;
+        document.getElementById("rngSessions").value = se;
+        document.getElementById("rngOcr").value = oc;
+        runEngine();
+      }
+
+      // Bind inputs
+      [
+        "rngStudents",
+        "rngSessions",
+        "rngOcr",
+        "rngCache",
+        "numFx",
+        "chkBuffer",
+      ].forEach((id) => {
+        document.getElementById(id).addEventListener("input", runEngine);
+      });
+
+      runEngine();
+    </script>
+  </body>
+</html>
